@@ -51,24 +51,31 @@ for number in list1to10:
 # Ask the user for a number **n**, 
 # then print all **even numbers** from 2 up to n.
 
-n=int(input("enter a number: "))
-print("even numbers from 2 to", n, ":")
-for number in range(2, n + 1, 2):
-    print(number)
+# n=int(input("enter a number: "))
+# print("even numbers from 2 to", n, ":")
+# for number in range(2, n + 1, 2):
+#     print(number)
 
-list_even_numbers = list(range(1, 45))
-for number in list_even_numbers:
-    #if number is eve, print it
-    if number % 2 == 0:
-        print(" even number" , number)
-    else:
-        print("odd number, skipping", number)
+# list_even_numbers = list(range(1, 45))
+# for number in list_even_numbers:
+#     #if number is eve, print it
+#     if number % 2 == 0:
+#         print(" even number" , number)
+#     else:
+#         print("odd number, skipping", number)
 
 
 # ### **Problem 6: Reverse a String**
 
 # Ask the user for a string, then print the string **backwards**.
 
+# name = input("Enter a string:")
+# reversed_name = ""
+# for char in name:
+#     reversed_name = char + reversed_name
+#     #prepend each character to reversed_name
+# print("reversed string:", reversed_name)
+# print(reversed_name[::-1]) #alternative method using slicing
 
 
 # ### **Problem 7: Multiplication Table**
@@ -87,7 +94,33 @@ for number in list_even_numbers:
 
 # ### **Problem 9: Fibonacci Sequence**
 
-# Ask the user for a number **n**, then print the first **n numbers** of the Fibonacci sequence.
+# Ask the user for a number **n**, 
+# then print the first **n numbers** of the Fibonacci sequence.
+
+#recursion mean a function calls itself
+# an example of a recursion is the fibonacci sequnce
+def car_price(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return car_price(n - 1) + car_price(n - 2)
+print(car_price(6)) #output: 8
+
+
+#fibonacci sequnce
+    #1 1 2 3 5 8 12 21
+
+def fibonacci(n):
+
+    if n==1 or n==2: #or if n in [1,2]:
+        return 1
+
+    return fibonacci(n-1)+fibonacci(n-2)
+
+for i in range(1,10):
+    print(fibonacci(i))
 
 
 
